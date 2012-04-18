@@ -24,6 +24,7 @@ Running The Application
 
 * for the server code  <br>
 <pre>
+
     var net = require('net');
 
     var server = net.createServer(function (socket) {
@@ -44,10 +45,10 @@ Running The Application
         console.log('DONE');
     });
 
-});
+    });
 
-server.listen(1338, '127.0.0.1');
-console.log("server is listen on 1338");
+    server.listen(1338, '127.0.0.1');
+    console.log("server is listen on 1338");
 
 </pre>
 
@@ -56,7 +57,8 @@ save to app.js run with `sudo node app.js` <br> or in windows you can use `node.
 
 * run in the browser TCPClient.php<br>
 <pre>
- define('__LIB__', dirname(dirname(__FILE__)));
+
+define('__LIB__', dirname(dirname(__FILE__)));
 require_once(__LIB__ . '/php/library/TCPConnection.php');
 require_once(__LIB__ . '/php/library/TCPCallback.php');
 
@@ -118,6 +120,7 @@ class TCPClient implements TCPCallback {
 
 $client = new TCPClient();
 $client->index();
+
 </pre>
 
 Features
