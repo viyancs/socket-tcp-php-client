@@ -2,7 +2,7 @@ socket-tcp-php-client
 ============
 
 this repository is communication using protocol tcp with the server using nodejs(net required) and the client using php, before you use this repository i'm recommended to read
-this article [TCP introduction](https://github.com/viyancs/socket-udp-java-client/wiki), because any some different in TCP and UDP.
+this article [TCP introduction](http://www.ssfnet.org/Exchange/tcp/tcpTutorialNotes.html).
 <br>
 
 requiretment 
