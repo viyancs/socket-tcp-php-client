@@ -58,20 +58,20 @@ save to app.js run with `sudo node app.js` <br> or in windows you can use `node.
 * run in the browser TCPClient.php<br>
 <pre>
 
-    define('__LIB__', dirname(dirname(__FILE__)));
-    require_once(__LIB__ . '/php/library/TCPConnection.php');
-    require_once(__LIB__ . '/php/library/TCPCallback.php');
+        define('__LIB__', dirname(dirname(__FILE__)));
+        require_once(__LIB__ . '/php/library/TCPConnection.php');
+        require_once(__LIB__ . '/php/library/TCPCallback.php');
 
-    class TCPClient implements TCPCallback {
-            public $socket;
-        public function index() {
-            $this->socket = new TCPConnection("127.0.0.1", 1338, $this);
-            $data = array("username" => "foo", "pass" => "bar");
-            $this->socket->connect();
-            //$socket->send("testing socket TCP dari viyancs"); // format string only
-            //$socket->emit("login",  array((object)($data),  (object)($data1))); //multy dimension json
-            $this->socket->emit("login", array($data)); //one array dimension json
-        }
+        class TCPClient implements TCPCallback {
+                public $socket;
+            public function index() {
+                $this->socket = new TCPConnection("127.0.0.1", 1338, $this);
+                $data = array("username" => "foo", "pass" => "bar");
+                $this->socket->connect();
+                //$socket->send("testing socket TCP dari viyancs"); // format string only
+                //$socket->emit("login",  array((object)($data),  (object)($data1))); //multy dimension json
+                $this->socket->emit("login", array($data)); //one array dimension json
+            }
 
         public function onConnect() {
             echo "socket is connected </br>";
@@ -116,10 +116,10 @@ save to app.js run with `sudo node app.js` <br> or in windows you can use `node.
             echo "=============================================================</br>";
         }
 
-    }
+        }
 
-    $client = new TCPClient();
-    $client->index();
+        $client = new TCPClient();
+        $client->index();
 
 </pre>
 
