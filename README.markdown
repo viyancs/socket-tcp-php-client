@@ -26,7 +26,6 @@ Running The Application
 <pre>
 
     var net = require('net');
-
     var server = net.createServer(function (socket) {
     // We have a connection - a socket object is assigned to the connection automatically
     console.log('CONNECTED: ' + socket.remoteAddress +':'+ socket.remotePort);
@@ -39,12 +38,10 @@ Running The Application
     });
     socket.on('connect', function() {
         console.log("client already connected");
-
     });
     socket.on('end', function() {
         console.log('DONE');
     });
-
     });
 
     server.listen(1338, '127.0.0.1');
