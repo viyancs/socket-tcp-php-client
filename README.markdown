@@ -56,7 +56,7 @@ Running The Application
 save to app.js run with `sudo node app.js` <br> or in windows you can use `node.exe app.js` 
 
 * run in the browser TCPClient.php<br>
-<pre>
+    <pre>
 
         define('__LIB__', dirname(dirname(__FILE__)));
         require_once(__LIB__ . '/php/library/TCPConnection.php');
@@ -121,7 +121,7 @@ save to app.js run with `sudo node app.js` <br> or in windows you can use `node.
         $client = new TCPClient();
         $client->index();
 
-</pre>
+    </pre>
 
 Features
 -----------------------
