@@ -29,7 +29,6 @@ Running The Application
     var server = net.createServer(function (socket) {
     // We have a connection - a socket object is assigned to the connection automatically
     console.log('CONNECTED: ' + socket.remoteAddress +':'+ socket.remotePort);
-    var nama = false;
     socket.on('data', function(data) {    
         //var datas = JSON.parse(data); //if you receive json must be parse 
         console.log('DATA ' + socket.remoteAddress + ': ' + data);  
@@ -43,7 +42,6 @@ Running The Application
         console.log('DONE');
     });
     });
-
     server.listen(1338, '127.0.0.1');
     console.log("server is listen on 1338");
 
