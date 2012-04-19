@@ -25,6 +25,7 @@ class TCPClient implements TCPCallback {
         $this->socket = new TCPConnection("127.0.0.1", 1338, $this);
         $data = array("username" => "foo", "pass" => "bar");
         $this->socket->connect();
+        //$this->socket->disconnect();
         //$socket->send("testing socket TCP dari viyancs"); // format string only
         //$socket->emit("login",  array((object)($data),  (object)($data1))); //multy dimension json
         $this->socket->emit("login", array($data)); //one array dimension json
