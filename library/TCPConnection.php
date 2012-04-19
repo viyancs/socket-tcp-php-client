@@ -61,7 +61,7 @@ require_once(__LIB__.'/php/library/TCPMessage.php');
             exit();
         }
         $this->getCallback()->onConnect();
-        //$this->read();
+        //$this->test();
     }
     
     public function send($message){
@@ -80,10 +80,10 @@ require_once(__LIB__.'/php/library/TCPMessage.php');
                          "args"=>$msg);
          $json = json_encode($array);
          $tcp->send($json);
-         $this->read();
+         //$this->test();
     }
     
-    private function read() {
+    /*private function read() {
         if (!socket_last_error($this->socket)) {
             if ($buffer = socket_read($this->socket, 512, PHP_NORMAL_READ)) {
                 $json = json_decode($buffer, true);
@@ -101,6 +101,19 @@ require_once(__LIB__.'/php/library/TCPMessage.php');
             }
         }
     }
+    
+    public function test(){
+        $reply = "";
+        do {
+            $recv = "";
+            $recv = socket_read($this->socket, '1400');
+            if ($recv != "") {
+                $reply .= $recv;
+            }
+        } while ($recv != "");
+
+        echo($reply);
+    }*/
 
     public function disconnect(){        
         socket_shutdown($this->socket, 2);
