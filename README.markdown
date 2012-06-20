@@ -1,4 +1,4 @@
-socket-tcp-php-client-test
+socket-tcp-php-client
 ============
 
 this repository is communication using protocol tcp with the server using nodejs(net required) and the client using php, before you use this repository i'm recommended to read
