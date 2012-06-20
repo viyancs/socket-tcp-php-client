@@ -116,6 +116,10 @@ save to app.js run with `sudo node app.js` <br> or in windows you can use `node.
     $client->index();
 </pre>
 
+Change Log
+-----------------------
+Version 1.0 [Release Note](https://github.com/viyancs/socket-tcp-php-client/wiki/Release-History);
+
 Features
 -----------------------
 
